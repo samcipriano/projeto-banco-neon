@@ -213,7 +213,7 @@ h1, h2, h3, h4 {
 }
 
 header {
-  position: absolute;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -222,6 +222,7 @@ header {
   display: -ms-flexbox;
   display: flex;
   border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+  z-index: 2022;
 }
 header .container {
   display: -webkit-box;
@@ -237,6 +238,37 @@ header .container {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+header.fixed-menu {
+  background-color: #FFFFFF;
+  -webkit-box-shadow: 0px 1.4px 2.2px rgba(0, 0, 0, 0.003), 0px 3.3px 5.3px rgba(0, 0, 0, 0.004), 0px 6.1px 10px rgba(0, 0, 0, 0.005), 0px 10.9px 17.9px rgba(0, 0, 0, 0.006), 0px 20.5px 33.4px rgba(0, 0, 0, 0.007), 0px 49px 80px rgba(0, 0, 0, 0.01);
+          box-shadow: 0px 1.4px 2.2px rgba(0, 0, 0, 0.003), 0px 3.3px 5.3px rgba(0, 0, 0, 0.004), 0px 6.1px 10px rgba(0, 0, 0, 0.005), 0px 10.9px 17.9px rgba(0, 0, 0, 0.006), 0px 20.5px 33.4px rgba(0, 0, 0, 0.007), 0px 49px 80px rgba(0, 0, 0, 0.01);
+}
+header.fixed-menu .logo {
+  background-image: url("../img/logo-neon-color.svg");
+}
+header.fixed-menu nav ul li a {
+  color: #5F5C6B;
+}
+header.fixed-menu nav ul li a:hover {
+  color: #0073CE;
+}
+header.fixed-menu nav .btn-secondary {
+  color: #0073CE;
+  border-color: #0073CE;
+}
+header.fixed-menu nav .btn-secondary:hover {
+  background: #0073CE;
+  color: #FFFFFF;
+}
+header .logo {
+  display: inline-block;
+  width: 13.2rem;
+  height: 3rem;
+  background: url("../img/logo.svg") no-repeat center center;
+  background-size: 100%;
+  -webkit-transition: background-image 0.3s;
+  transition: background-image 0.3s;
 }
 header nav {
   position: relative;
@@ -256,6 +288,8 @@ header nav .dropdown {
   max-width: 37.3rem;
   background: #FFFFFF;
   border-radius: 0.6rem;
+  -webkit-box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.006), 0px 0px 5.3px rgba(0, 0, 0, 0.008), 0px 0px 10px rgba(0, 0, 0, 0.01), 0px 0px 17.9px rgba(0, 0, 0, 0.012), 0px 0px 33.4px rgba(0, 0, 0, 0.014), 0px 0px 80px rgba(0, 0, 0, 0.02);
+          box-shadow: 0px 0px 2.2px rgba(0, 0, 0, 0.006), 0px 0px 5.3px rgba(0, 0, 0, 0.008), 0px 0px 10px rgba(0, 0, 0, 0.01), 0px 0px 17.9px rgba(0, 0, 0, 0.012), 0px 0px 33.4px rgba(0, 0, 0, 0.014), 0px 0px 80px rgba(0, 0, 0, 0.02);
   padding: 4rem;
   opacity: 0;
   pointer-events: none;
